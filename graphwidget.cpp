@@ -160,8 +160,7 @@ void GraphWidget::drawBackground(QPainter *painter, const QRectF &rect)
     // Text
     QRectF textRect(sceneRect.left() + 4, sceneRect.top() + 4,
                     sceneRect.width() - 4, sceneRect.height() - 4);
-    QString message(tr("Click and drag the nodes around, and zoom with the mouse "
-                       "wheel or the '+' and '-' keys"));
+   QString message(tr("Գրաֆ"));
 
     QFont font = painter->font();
     font.setBold(true);

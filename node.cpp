@@ -38,18 +38,18 @@
      qreal xvel = 0;
      qreal yvel = 0;
      foreach (QGraphicsItem *item, scene()->items()) {
-//         Node *node = qgraphicsitem_cast<Node *>(item);
-//         if (!node)
-//             continue;
+         Node *node = qgraphicsitem_cast<Node *>(item);
+         if (!node)
+             continue;
 
-//         QLineF line(mapFromItem(node, 0, 0), QPointF(0, 0));
-//         qreal dx = line.dx();
-//         qreal dy = line.dy();
-//         double l = 2.0 * (dx * dx + dy * dy);
-//         if (l > 0) {
-//             xvel += (dx * 150.0) / l;
-//             yvel += (dy * 150.0) / l;
-//         }
+         QLineF line(mapFromItem(node, 0, 0), QPointF(0, 0));
+         qreal dx = line.dx();
+         qreal dy = line.dy();
+         double l = 2.0 * (dx * dx + dy * dy);
+         if (l > 0) {
+             xvel += (dx * 150.0) / l;
+             yvel += (dy * 150.0) / l;
+         }
      }
 
      // Now subtract all forces pulling items together
